@@ -1,0 +1,342 @@
+/* AESR-SHIFT INDIA — dashboard refinements
+   Proposal-oriented typography + interactive spatial dashboard */
+
+:root {
+  --map-panel: #f8faf8;
+  --map-border: #d6e0d9;
+  --map-ink: #1c2e25;
+  --pilot-1: #b8752a;
+  --pilot-2: #28745a;
+  --pilot-3: #416f9d;
+}
+
+/* ---------- More compact proposal-friendly typography ---------- */
+body {
+  font-size: 15.5px;
+  line-height: 1.56;
+}
+.section {
+  padding-top: 4.4rem;
+  padding-bottom: 4.4rem;
+}
+.section.compact {
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+}
+.section-heading {
+  margin-bottom: 1.6rem;
+}
+.section-heading h2 {
+  font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+}
+.hero {
+  padding-top: 5.1rem;
+  padding-bottom: 5.2rem;
+}
+.hero-grid {
+  gap: 3rem;
+}
+.hero h1 {
+  font-size: clamp(2.15rem, 4vw, 4.05rem);
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+  margin: 0.55rem 0 1.15rem;
+}
+.lead {
+  font-size: 1.08rem;
+  line-height: 1.62;
+}
+.section-intro {
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+blockquote {
+  font-size: 1.13rem;
+  line-height: 1.48;
+}
+.metric {
+  min-height: 122px;
+  padding: 1rem;
+}
+.metric-value {
+  font-size: 1.9rem;
+}
+.metric-label,
+.card p,
+.wide-card p,
+.pilot-card p,
+.tier p,
+.objective-list p,
+.method-grid p {
+  font-size: 0.94rem;
+}
+.card h3,
+.wide-card h3,
+.pilot-card h3,
+.tier h3,
+.objective-list h3,
+.method-grid h3 {
+  font-size: 1.03rem;
+}
+.site-nav a {
+  font-size: 0.87rem;
+}
+
+/* ---------- Spatial dashboard ---------- */
+.spatial-dashboard {
+  position: relative;
+  overflow: hidden;
+}
+.map-source-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #c8d9ce;
+  background: #fff;
+  color: #365748;
+  font-size: 0.76rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.map-source-badge::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2c8d67;
+  box-shadow: 0 0 0 4px #e2f0e9;
+}
+.map-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 0 0 1rem;
+}
+.map-kpi {
+  background: #fff;
+  border: 1px solid var(--map-border);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+}
+.map-kpi strong,
+.map-kpi span {
+  display: block;
+}
+.map-kpi strong {
+  font-size: 1.2rem;
+  line-height: 1.1;
+  color: var(--brand-dark);
+}
+.map-kpi span {
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+.map-shell {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  min-height: 620px;
+  border: 1px solid var(--map-border);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(24, 59, 43, 0.06);
+}
+.map-tools {
+  padding: 1.05rem;
+  background: var(--map-panel);
+  border-right: 1px solid var(--map-border);
+}
+.map-tools h3 {
+  margin: 0 0 0.25rem;
+  font-size: 0.98rem;
+}
+.map-tools > p {
+  margin: 0 0 0.95rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+.map-tool-label {
+  display: block;
+  margin: 1rem 0 0.45rem;
+  color: #60746a;
+  font-size: 0.69rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.map-mode-list,
+.pilot-jump-list {
+  display: grid;
+  gap: 0.42rem;
+}
+.map-mode,
+.pilot-jump,
+.map-reset {
+  width: 100%;
+  border: 1px solid #d3ded7;
+  background: #fff;
+  color: #31493d;
+  border-radius: 9px;
+  padding: 0.62rem 0.72rem;
+  text-align: left;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 720;
+  cursor: pointer;
+  transition: 0.16s ease;
+}
+.map-mode:hover,
+.pilot-jump:hover,
+.map-reset:hover {
+  border-color: #95b7a5;
+  background: #f5faf7;
+}
+.map-mode.active {
+  background: var(--brand-dark);
+  color: #fff;
+  border-color: var(--brand-dark);
+}
+.pilot-jump[data-pilot="P1"] { border-left: 4px solid var(--pilot-1); }
+.pilot-jump[data-pilot="P2"] { border-left: 4px solid var(--pilot-2); }
+.pilot-jump[data-pilot="P3"] { border-left: 4px solid var(--pilot-3); }
+.map-reset {
+  margin-top: 0.45rem;
+  text-align: center;
+}
+.map-status {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border-radius: 9px;
+  background: #edf3ef;
+  color: #53675d;
+  font-size: 0.71rem;
+  line-height: 1.45;
+}
+.map-main {
+  position: relative;
+  min-width: 0;
+}
+#aesr-map {
+  width: 100%;
+  height: 620px;
+  background: #e9eeeb;
+}
+.map-legend {
+  position: absolute;
+  z-index: 600;
+  right: 12px;
+  bottom: 14px;
+  width: min(230px, calc(100% - 24px));
+  padding: 0.75rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(53, 75, 64, 0.18);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 6px 20px rgba(28, 46, 37, 0.12);
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+.map-legend strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.76rem;
+}
+.legend-row {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 0.45rem;
+  align-items: center;
+  margin: 0.24rem 0;
+}
+.legend-swatch {
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.18);
+}
+.map-note-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  margin-top: 0.9rem;
+}
+.map-note {
+  padding: 0.85rem 0.95rem;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+.map-note strong {
+  display: block;
+  color: var(--ink);
+  margin-bottom: 0.22rem;
+}
+.leaflet-container {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 12px;
+}
+.leaflet-popup-content {
+  margin: 12px 14px;
+  min-width: 220px;
+  line-height: 1.45;
+}
+.aesr-popup h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.92rem;
+  color: var(--brand-dark);
+}
+.aesr-popup dl {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  gap: 0.25rem 0.55rem;
+  margin: 0;
+}
+.aesr-popup dt {
+  color: #6b7d73;
+  font-weight: 700;
+}
+.aesr-popup dd {
+  margin: 0;
+}
+.aesr-popup .pilot-popup {
+  margin-top: 0.6rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid #e1e8e3;
+  color: #62421f;
+  font-weight: 700;
+}
+
+@media (max-width: 1080px) {
+  .map-shell { grid-template-columns: 205px minmax(0, 1fr); }
+  .map-kpis { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 820px) {
+  body { font-size: 15px; }
+  .hero { padding-top: 4.1rem; padding-bottom: 4.2rem; }
+  .hero h1 { font-size: clamp(2rem, 9vw, 3rem); }
+  .section { padding-top: 3.7rem; padding-bottom: 3.7rem; }
+  .section-heading h2 { font-size: clamp(1.6rem, 7vw, 2.15rem); }
+  .map-shell { grid-template-columns: 1fr; }
+  .map-tools { border-right: 0; border-bottom: 1px solid var(--map-border); }
+  .map-mode-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pilot-jump-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #aesr-map { height: 540px; }
+  .map-note-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  .map-kpis { grid-template-columns: 1fr 1fr; }
+  .map-mode-list,
+  .pilot-jump-list { grid-template-columns: 1fr; }
+  #aesr-map { height: 500px; }
+  .map-legend { display: none; }
+}
