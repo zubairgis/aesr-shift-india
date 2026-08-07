@@ -1,6 +1,6 @@
 # AESR-SHIFT INDIA — Proposal section links
 
-Once GitHub Pages is enabled, the dashboard base URL will be:
+Dashboard base URL:
 
 `https://zubairgis.github.io/aesr-shift-india/`
 
@@ -14,6 +14,11 @@ Use the following stable anchors in proposal text and supplementary documentatio
 | Research gap | `#research-gap` |
 | Core innovation | `#core-innovation` |
 | Central premise | `#central-premise` |
+| Interactive spatial dashboard | `#interactive-map` |
+| AESR/AER reference map | `#map-reference` |
+| Climate-regime map | `#map-climate` |
+| Reference-LGP map | `#map-lgp` |
+| Three-pilot map | `#map-pilots` |
 | Preliminary evidence | `#preliminary-evidence` |
 | Pilot AESR 2.1 | `#pilot-aesr-2-1` |
 | Pilot AESR 10.3 | `#pilot-aesr-10-3` |
@@ -49,7 +54,10 @@ Use the following stable anchors in proposal text and supplementary documentatio
 | Downloads | `#downloads` |
 | About | `#about` |
 
-## Example
+## Examples
+
+Interactive spatial dashboard:
+`https://zubairgis.github.io/aesr-shift-india/#interactive-map`
 
 Preliminary evidence:
 `https://zubairgis.github.io/aesr-shift-india/#preliminary-evidence`
