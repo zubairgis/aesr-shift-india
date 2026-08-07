@@ -14,11 +14,13 @@ Use the following stable anchors in proposal text and supplementary documentatio
 | Research gap | `#research-gap` |
 | Core innovation | `#core-innovation` |
 | Central premise | `#central-premise` |
-| Interactive spatial dashboard | `#interactive-map` |
+| Interactive analytical map | `#interactive-map` |
 | AESR/AER reference map | `#map-reference` |
 | Climate-regime map | `#map-climate` |
 | Reference-LGP map | `#map-lgp` |
-| Three-pilot map | `#map-pilots` |
+| Available-water-capacity map | `#map-awc` |
+| Soil-group map | `#map-soil` |
+| Three-pilot evidence map | `#map-pilots` |
 | Preliminary evidence | `#preliminary-evidence` |
 | Pilot AESR 2.1 | `#pilot-aesr-2-1` |
 | Pilot AESR 10.3 | `#pilot-aesr-10-3` |
@@ -56,7 +58,7 @@ Use the following stable anchors in proposal text and supplementary documentatio
 
 ## Examples
 
-Interactive spatial dashboard:
+Interactive analytical map:
 `https://zubairgis.github.io/aesr-shift-india/#interactive-map`
 
 Preliminary evidence:
