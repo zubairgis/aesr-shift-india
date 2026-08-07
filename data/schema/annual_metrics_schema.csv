@@ -1,0 +1,13 @@
+FIELD,DESCRIPTION,STATUS
+AESR_ID,Stable Agro-Ecological Sub-Region identifier,planned
+YEAR,Calendar or analysis year,planned
+LGP_OBS_DAYS,Observed dynamic growing-period duration in days,planned
+ONSET_DOY,Functional season onset day-of-year,planned
+CESSATION_DOY,Functional season cessation day-of-year,planned
+MAX_DRYSPELL_DAYS,Maximum within-season dry-spell duration,planned
+HEAT_DAYS,Crop-relevant heat exposure count,planned
+SOILMOIST_DURATION,Moisture persistence duration,planned
+CLIMATE_FIDELITY,Similarity to reference AESR climatic state,proposed
+TRANSITION_STATE,Agro-ecological transition status,proposed
+EVID_LEVEL,E0-E5 evidence maturity,required
+UNCERTAINTY,Indicator-specific uncertainty statement or value,required

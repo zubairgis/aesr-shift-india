@@ -1,0 +1,7 @@
+EVID_LEVEL,EVID_NAME,DEFINITION
+E0,Source evidence,Authoritative or raw source data before analytical transformation.
+E1,Harmonized evidence,Source data quality-controlled standardized and spatially or temporally harmonized.
+E2,Derived evidence,Indicator or metric derived using a documented and reproducible analytical method.
+E3,Validated evidence,Derived result independently validated benchmarked or confirmed using additional evidence.
+E4,Explanatory evidence,Robust explanatory relationship supported after relevant controls and sensitivity tests.
+E5,Decision-ready evidence,Convergent validated evidence sufficiently mature to support an explicit adaptation or management recommendation.
